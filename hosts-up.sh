@@ -23,7 +23,7 @@
 
 
 # Ubicacion de la Base de Datos donde almacenar la informacion
-BD="/home/fortu/Bases de Datos/Hosts_UP.db"
+BD="/home/usuario/Bases de Datos/Hosts_UP.db"
 
 # Verificar la existencia de la base de datos. En caso de no exista la crea con el path y nombre indicado.
 if [ ! -f "$BD" ];
