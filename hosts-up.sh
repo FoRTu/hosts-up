@@ -43,7 +43,7 @@ let hosts=$net_0+$net_1
 # let hosts=$net_0+$net_1+$net_X....
 
 # Guardar la suma de equipos y la fecha actual en la base de datos Sqlite.
-sqlite3 "$BD" "INSERT INTO Hosts_UP (fecha,up) VALUES (datetime('now'), '"$hosts"');"
+sqlite3 "$BD" "INSERT INTO Hosts_UP (fecha,up) VALUES (datetime('now', 'localtime'), '"$hosts"');"
 
 # Hacer una cosnulta SQL a la base de datos para que nos devulva toda la informacion guardada.
 sqlite3 "$BD" 'SELECT * FROM Hosts_UP;'
